@@ -1,0 +1,209 @@
+$medium: 915px;
+$small: 596px;
+
+$font-title:'Cantarell', sans-serif;
+$font-subtitle:'Jost', sans-serif;
+$background: linear-gradient(175deg, #f26d007c 0%, #0715dd78 100%);
+$background: linear-gradient(135deg, #f26d007c 0%, #0715dd78 100%);
+
+$background-article: #e8d4c4;
+
+$margin-hero-text-wide: 0 15px 15px 350px;
+$margin-hero-text-medium: 0px 15px 15px 100px;
+$margin-hero-text-small: 0 15px 15px 5px;
+
+$white:#FFFFFF;
+$black:#0A0A0A;
+$light:#F5F5F5;
+$gray:#7A7A7A;
+$gray-hover:#727272;
+
+$dark:#363636;
+
+$primary:#00D1B2;
+$primary-hover:#00c4a7;
+
+$link:#3273DC;
+$link-hover:#2f6cce;
+
+$info:#209CEE;
+$success:#23D160;
+$warning:#FFDD57;
+$danger:#FF3860;
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior:smooth;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    // padding: 80px 0;
+    padding: 10px 0;
+    max-width: 1200px;
+}
+
+.container__article{
+    width: 90%;
+    // margin: 0 auto;
+    overflow: hidden;
+    // padding: 10px 0;
+    max-width: 1200px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.hero{
+    background-image: $background,url('../img/welding2.jpg');
+    display:grid;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative; 
+    .container{
+        padding: 0;
+    }
+    .btn{
+        @media screen and (max-width: $medium) {
+            margin:$margin-hero-text-medium;
+        }
+        @media screen and (max-width: $small) {
+            margin:$margin-hero-text-small;
+        }
+    }
+}
+
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color:#fff;
+}
+
+.hero__texts{
+    width: 80%;
+    margin-bottom: 200px;
+    @media screen and (max-width: $medium) {
+        width: 80%;
+        margin-bottom: 0px;
+    }
+    @media screen and (max-width: $small) {
+        width: 80%;
+        margin-bottom: 300px;
+    }
+
+}
+
+.hero__title{
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-left:-5px;
+    @media screen and (max-width: $medium) {
+        margin:$margin-hero-text-medium;
+        font-size: 5rem;
+        line-height: 85px;
+    }
+    @media screen and (max-width: $small) {
+        margin:$margin-hero-text-small;
+        font-size: 3.5rem;
+        line-height: 70px;
+    }
+}
+
+.hero__subtitle{
+    font-family: $font-subtitle;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 55px auto;
+    line-height: 36px;
+
+    @media screen and (max-width: $medium) {
+        margin:$margin-hero-text-medium;
+        line-height: 45px;
+    }
+
+    @media screen and (max-width: $small) {
+        margin:$margin-hero-text-small;
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+}
+
+.text__title{
+	font-family: $font-subtitle;
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 36px;
+    margin:10px auto;
+}
+
+.text__paragraph{
+	font-family: $font-subtitle;
+    font-size: 1.1rem;
+	font-weight: 500;
+	line-height: 30px;
+    margin-bottom: 30px;
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: $background-article;
+}
+
+section{
+    margin-top:40px;
+}
+
+.btn {
+	border-radius:5px;
+    border:0;
+	display:inline-block;
+	cursor:pointer;
+	color:$dark;
+	font-family:$font-subtitle;
+	font-size:1rem;
+	padding:11px 23px;
+	text-decoration:none;
+    &:active{
+        position:relative;
+        top:1px;
+    }
+}
+
+.btn.btn-light{
+    color:$light;
+    background:$gray;
+    &:hover{
+        background-color:$gray-hover;
+    }
+}
+.btn-primary{
+    color:$light;
+    background:$primary;
+    &:hover{
+        background-color:$primary-hover;
+    }
+}
+.btn-success{
+    color:$light;
+    background:$link;
+    &:hover{
+        background-color:$link-hover;
+    }
+}

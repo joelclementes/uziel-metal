@@ -1,0 +1,194 @@
+:root{
+    --font-title:'Cantarell', sans-serif;
+    --font-subtitle:'Jost', sans-serif;
+    --background: linear-gradient(175deg, #f26d007c 0%, #0715dd78 100%);
+
+    --background-article: #e8d4c4;
+
+    --margin-hero-text-wide: 0 15px 15px 350px;
+    --margin-hero-text-tablet: 0 15px 15px 100px;
+    --margin-hero-text-mobile: 0 15px 15px 5px;
+}
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+    scroll-behavior:smooth;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+}
+
+.container__article{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    max-width: 1200px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.hero{
+    background-image: var(--background),url('../img/welding2.jpg');
+    display:grid;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative; 
+}
+
+.hero .container{
+    padding: 0;
+}
+
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color:#fff;
+}
+
+.hero__texts{
+    width: 80%;
+    margin-bottom: 200px;
+}
+
+.hero__title{
+    font-family: var(--font-title);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 5rem;
+}
+.hero__subtitle{
+    font-family: var(--font-subtitle);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 36px;
+    margin: 55px auto;
+}
+
+.error{
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height:80vh;
+}
+
+.error__title{
+    font-family: var(--font-title);
+	font-weight: 600;
+	font-size: 2.5rem;
+	line-height: 36px;
+    margin:0px auto;
+    margin-bottom: 20px;
+}
+.error__paragraph{
+    margin:0px auto;
+    margin-top:20px;
+    margin-bottom:50px;
+}
+.error img{
+    width:35rem;
+    margin:0px auto;
+    /* margin:50px 0 20px 0; */
+}
+
+.text__title{
+	font-family: var(--font-subtitle);
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 36px;
+    margin:0px auto;
+}
+
+.text__paragraph, .error__paragraph{
+	font-family: var(--font-subtitle);
+    font-size: 1.3rem;
+	font-weight: 500;
+	line-height: 30px;
+    margin-bottom: 30px;
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--background-article);
+}
+
+section{
+    margin-top:40px;
+}
+@media (max-width:915px){
+    .hero{
+        height:100vh;
+    }
+    .hero__texts{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+
+    .hero__title{
+        margin:var(--margin-hero-text-tablet);
+        font-size: 5rem;
+        line-height: 85px;
+    }
+    
+    .hero__subtitle{
+        margin:var(--margin-hero-text-tablet);
+        line-height: 45px;
+      }
+
+      .error img{
+        width:18rem;
+        margin:0px auto;
+        /* margin:50px 0 20px 0; */
+    }
+
+}
+
+@media (max-width:596px){
+    .hero__texts{
+        width: 80%;
+        margin-bottom: 300px;
+    }
+    .hero__title{
+        margin:var(--margin-hero-text-mobile);
+        font-size: 3.5rem;
+        line-height: 70px;
+    }
+    
+    .hero__subtitle{
+        margin:var(--margin-hero-text-mobile);
+        font-size: 1.5rem;
+        line-height: 30px;
+      }
+
+      .error__title{
+        font-family: var(--font-title);
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 36px;
+        margin:30px auto;
+    }
+
+      .error img{
+        width:18rem;
+        margin:0px auto;
+    }
+}
